@@ -1,7 +1,7 @@
 export default function add(inputString: any): number {
   if (typeof inputString !== "string" || inputString.length === 0) return 0;
   const customSeparator = inputString.match(/^\/\/(.)\n/);
-  let separator = ",\n\\s";
+  let separator = ",\n";
   let splittedString = inputString;
 
   if (customSeparator) {
