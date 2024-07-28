@@ -11,13 +11,24 @@ export default function add(inputString: any): number {
 
   const regex = new RegExp(`[${separator}]+`);
   let sum = 0;
-
+  let negativeNumbers = [];
   for (const values of splittedString.split(regex)) {
     const num = parseInt(values);
+    if (num < 0) {
+      negativeNumbers.push(num);
+    }
+    if (negativeNumbers.length > 0) {
+      continue;
+    }
     if (isNaN(num)) {
       throw new TypeError("Alphanumeric values are not allowed");
     }
     sum += num;
+  }
+  if (negativeNumbers.length > 0) {
+    throw new Error(
+      `Negative numbers not allowed ${negativeNumbers.join(", ")}`
+    );
   }
 
   return sum;
