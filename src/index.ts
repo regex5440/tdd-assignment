@@ -17,7 +17,7 @@ export default function add(inputString: any): number {
     if (num < 0) {
       negativeNumbers.push(num);
     }
-    if (negativeNumbers.length > 0) {
+    if (negativeNumbers.length > 0 || num > 1000) {
       continue;
     }
     if (isNaN(num)) {

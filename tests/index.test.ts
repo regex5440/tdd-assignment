@@ -48,4 +48,8 @@ describe("Handle valid input", () => {
     expect(add("//;\n 1; 2, 4")).toBe(7);
     d();
   });
+  it("values greater than 1000 should be ignored", (d) => {
+    expect(add("2,1001,34")).toBe(36);
+    d();
+  });
 });
