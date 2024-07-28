@@ -10,3 +10,14 @@ describe("Handle invalid input", () => {
     d();
   });
 });
+
+describe("Handle valid input", () => {
+  it("single digit", (d) => {
+    expect(add("1")).toBe(1);
+    d();
+  });
+  it("multiple digits", (d) => {
+    expect(add("1,2,3")).toBe(6);
+    d();
+  });
+});
