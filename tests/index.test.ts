@@ -20,6 +20,10 @@ describe("Handle valid input", () => {
     expect(add("1,2,3")).toBe(6);
     d();
   });
+  it("multiple alphanumeric values", (d) => {
+    expect(add.bind(null, "1,ab,3s")).toThrow(TypeError);
+    d();
+  });
   it("multiple digits with comma and whitespace", (d) => {
     expect(add("1, 2, 3")).toBe(6);
     d();
