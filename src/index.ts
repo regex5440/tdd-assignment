@@ -1,7 +1,7 @@
 function formatForRegex(char: string) {
   return /\w+/i.test(char) ? char : "\\" + char;
 }
-
+//! @param {inputString} is kept any for the test purpose only, it should be string
 export default function add(inputString: any): number {
   if (typeof inputString !== "string" || inputString.length === 0) return 0;
 
