@@ -13,6 +13,10 @@ describe("Handle invalid input", () => {
     expect(add.bind(null, "1,\n")).toThrow(TypeError);
     d();
   });
+  it("no negative numbers", (d) => {
+    expect(add.bind(null, "1, -2, 3")).toThrow(Error);
+    d();
+  });
 });
 
 describe("Handle valid input", () => {
