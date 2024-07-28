@@ -20,4 +20,8 @@ describe("Handle valid input", () => {
     expect(add("1,2,3")).toBe(6);
     d();
   });
+  it("multiple digits with comma and whitespace", (d) => {
+    expect(add("1, 2, 3")).toBe(6);
+    d();
+  });
 });
