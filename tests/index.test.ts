@@ -40,4 +40,8 @@ describe("Handle valid input", () => {
     expect(add("//;\n1;2")).toBe(3);
     d();
   });
+  it("values with custom separator and default separators", (d) => {
+    expect(add("//;\n 1; 2, 4")).toBe(7);
+    d();
+  });
 });
