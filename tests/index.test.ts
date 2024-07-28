@@ -53,7 +53,11 @@ describe("Handle valid input", () => {
     d();
   });
   it("delimiter of any length", (d) => {
-    expect(add("//[***\n2***3***4")).toBe(9);
+    expect(add("//[***]\n2***3***4")).toBe(9);
+    d();
+  });
+  it("multiple delimiters", (d) => {
+    expect(add("//[*][%]\n1*3%4")).toBe(8);
     d();
   });
 });

@@ -27,7 +27,7 @@ export default function add(inputString: any): number {
 
         if (customSeparator.length > 0) {
           customSeparatorList.push(customSeparator);
-          i = j;
+          i = j + 1;
           continue;
         }
       }
