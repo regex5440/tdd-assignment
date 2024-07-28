@@ -52,4 +52,8 @@ describe("Handle valid input", () => {
     expect(add("2,1001,34")).toBe(36);
     d();
   });
+  it("delimiter of any length", (d) => {
+    expect(add("//[***\n2***3***4")).toBe(9);
+    d();
+  });
 });
