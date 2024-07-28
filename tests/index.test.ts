@@ -17,6 +17,10 @@ describe("Handle invalid input", () => {
     expect(add.bind(null, "1, -2, 3")).toThrow(Error);
     d();
   });
+  it("invalid delimiter format", (d) => {
+    expect(add.bind(null, "//[***\n2***3***4")).toThrow(SyntaxError);
+    d();
+  });
 });
 
 describe("Handle valid input", () => {

@@ -24,6 +24,11 @@ export default function add(inputString: any): number {
           customSeparator += formatForRegex(matchedString[j]);
           j++;
         }
+        if (j === matchedString.length) {
+          throw new SyntaxError(
+            "Invalid delimiter format. Supported format: //[**]\n1**2"
+          );
+        }
 
         if (customSeparator.length > 0) {
           customSeparatorList.push(customSeparator);
