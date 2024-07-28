@@ -36,4 +36,8 @@ describe("Handle valid input", () => {
     expect(add("1\n2,3")).toBe(6);
     d();
   });
+  it("values with custom delimiter", (d) => {
+    expect(add("//;\n1;2")).toBe(3);
+    d();
+  });
 });
