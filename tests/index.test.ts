@@ -9,6 +9,10 @@ describe("Handle invalid input", () => {
     expect(add.bind(null, "1,ab,3s")).toThrow(TypeError);
     d();
   });
+  it("no values between separators", (d) => {
+    expect(add.bind(null, "1,\n")).toThrow(TypeError);
+    d();
+  });
 });
 
 describe("Handle valid input", () => {
