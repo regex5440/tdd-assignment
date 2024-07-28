@@ -60,4 +60,8 @@ describe("Handle valid input", () => {
     expect(add("//[*][%]\n1*3%4")).toBe(8);
     d();
   });
+  it("multiple delimiters with any length", (d) => {
+    expect(add("//[*][%%][ab]\n1*2ab3%%4")).toBe(10);
+    d();
+  });
 });
